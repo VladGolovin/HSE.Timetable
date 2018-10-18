@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "discipline-kind-e",
+  "editForm": "discipline-kind-e",
+  "external": false,
+  "caption": "Виды дисциплин",
+  "name": "DisciplineKindL",
+  "className": "DisciplineKindL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "discipline-kind",
+      "modelProjection": "DisciplineKindL"
+    }
+  ]
+}

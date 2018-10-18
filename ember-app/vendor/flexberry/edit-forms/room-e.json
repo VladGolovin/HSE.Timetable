@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Аудитория",
+  "name": "RoomE",
+  "className": "RoomE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "room",
+      "modelProjection": "RoomE"
+    }
+  ]
+}

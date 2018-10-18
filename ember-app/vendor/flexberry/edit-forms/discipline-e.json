@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Teacher",
+      "projection": "TeacherL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "DisciplineKind",
+      "projection": "DisciplineKindL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Дисциплина",
+  "name": "DisciplineE",
+  "className": "DisciplineE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "discipline",
+      "modelProjection": "DisciplineE"
+    }
+  ]
+}

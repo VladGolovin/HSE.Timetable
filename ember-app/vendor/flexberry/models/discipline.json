@@ -1,0 +1,278 @@
+﻿{
+  "name": "Discipline",
+  "modelName": "discipline",
+  "className": "Discipline",
+  "nameSpace": "",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "createTime",
+      "type": "date",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "creator",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "editTime",
+      "type": "date",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "editor",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "disciplineKind",
+      "relatedTo": "discipline-kind",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "teacher",
+      "relatedTo": "teacher",
+      "inverse": "discipline"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "AuditView",
+      "modelName": "discipline",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Teacher",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "surname",
+              "caption": "Surname",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "caption": "Teacher",
+          "name": "teacher",
+          "relatedTo": "teacher",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "DisciplineKind",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 3,
+          "caption": "",
+          "name": "disciplineKind",
+          "relatedTo": "discipline-kind",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "DisciplineD",
+      "modelName": "discipline",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "DisciplineKind",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "caption": "Вид",
+          "name": "disciplineKind",
+          "relatedTo": "discipline-kind",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Teacher",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [],
+          "index": 3,
+          "caption": "",
+          "name": "teacher",
+          "relatedTo": "teacher",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "DisciplineE",
+      "modelName": "discipline",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Surname",
+          "lookupValueField": "surname",
+          "relationName": "Teacher",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "surname",
+              "caption": "",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "caption": "Преподаватель",
+          "name": "teacher",
+          "relatedTo": "teacher",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "DisciplineKind",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "caption": "Вид",
+          "name": "disciplineKind",
+          "relatedTo": "discipline-kind",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "DisciplineL",
+      "modelName": "discipline",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Teacher",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "surname",
+              "caption": "Преподаватель",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "caption": "Преподаватель",
+          "name": "teacher",
+          "relatedTo": "teacher",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "DisciplineKind",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Вид занятия",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "caption": "Вид занятия",
+          "name": "disciplineKind",
+          "relatedTo": "discipline-kind",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

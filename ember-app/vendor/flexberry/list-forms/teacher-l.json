@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "teacher-e",
+  "editForm": "teacher-e",
+  "external": false,
+  "caption": "Преподаватели",
+  "name": "TeacherL",
+  "className": "TeacherL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "teacher",
+      "modelProjection": "TeacherL"
+    }
+  ]
+}

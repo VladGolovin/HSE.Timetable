@@ -28,6 +28,7 @@ namespace HSE.Timetable
     // *** Start programmer edit section *** (Room CustomAttributes)
 
     // *** End programmer edit section *** (Room CustomAttributes)
+    [PublishName("Room")]
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.@this)]
     [View("AuditView", new string[] {

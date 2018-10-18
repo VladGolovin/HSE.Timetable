@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "discipline-e",
+  "editForm": "discipline-e",
+  "external": false,
+  "caption": "Дисциплины",
+  "name": "DisciplineL",
+  "className": "DisciplineL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "discipline",
+      "modelProjection": "DisciplineL"
+    }
+  ]
+}

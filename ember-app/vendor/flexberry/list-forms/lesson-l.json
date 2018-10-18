@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "lesson-e",
+  "editForm": "lesson-e",
+  "external": false,
+  "caption": "Занятия",
+  "name": "LessonL",
+  "className": "LessonL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "lesson",
+      "modelProjection": "LessonL"
+    }
+  ]
+}

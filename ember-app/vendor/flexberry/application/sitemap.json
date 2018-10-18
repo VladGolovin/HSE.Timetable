@@ -1,0 +1,43 @@
+﻿{
+  "applicationCaption": "НИУ ВШЭ Расписание",
+  "applicationTitle": "Hse timetable",
+  "items": [
+    {
+      "link": null,
+      "menuName": "hse-timetable",
+      "caption": "HseTimetable",
+      "title": "HseTimetable",
+      "children": [
+        {
+          "link": "lesson-l",
+          "menuName": null,
+          "caption": "Lesson",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "teacher-l",
+          "menuName": null,
+          "caption": "Teacher",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "discipline-l",
+          "menuName": null,
+          "caption": "Discipline",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "room-l",
+          "menuName": null,
+          "caption": "Room",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

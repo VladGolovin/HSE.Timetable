@@ -1,0 +1,51 @@
+@import "src/semantic";
+@import "node_modules/ember-flexberry/addon/styles/addon";
+@import "./timetable/timetable.less";
+
+.spinner {
+  background: url('images/nyan.gif') no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.loading-message {
+  text-align: center;
+  color: #aaa;
+}
+
+#example {  
+  padding-top: 60px;
+
+  .flexberry-content {
+    padding: 1em 0;
+    height: 100%;
+  }
+}
+
+#example-mobile {
+  .flexberry-content {
+    padding: 0px 10px 2em 10px;
+    border-bottom: none;
+    height: 100%;
+  }
+}
+
+.background-logo {
+  height: 60px;
+  background: #0054fa;
+}
+
+.ui.menu > .grid, .ui.menu > .container {
+  background: #0054fa !important;
+}
+
+.inverted.vertical.main.menu.sidebar {
+  top: 60px;
+  height: ~"calc(100vh - 60px)" !important;
+}
+
+.full.height {
+  height: ~"calc(100vh - 60px)";
+}

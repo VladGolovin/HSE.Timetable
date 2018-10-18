@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "room-e",
+  "editForm": "room-e",
+  "external": false,
+  "caption": "Аудитории",
+  "name": "RoomL",
+  "className": "RoomL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "room",
+      "modelProjection": "RoomL"
+    }
+  ]
+}

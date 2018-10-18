@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Вид дисциплины",
+  "name": "DisciplineKindE",
+  "className": "DisciplineKindE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "discipline-kind",
+      "modelProjection": "DisciplineKindE"
+    }
+  ]
+}

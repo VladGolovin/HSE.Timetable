@@ -28,6 +28,7 @@ namespace HSE.Timetable
     // *** Start programmer edit section *** (Teacher CustomAttributes)
 
     // *** End programmer edit section *** (Teacher CustomAttributes)
+    [PublishName("Teacher")]
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.@this)]
     [View("AuditView", new string[] {
@@ -38,6 +39,8 @@ namespace HSE.Timetable
             "Surname as \'Фамилия\'",
             "Name as \'Имя\'",
             "MiddleName as \'Отчество\'"})]
+    [AssociatedDetailViewAttribute("TeacherE", "Discipline", "DisciplineE", true, "", "Дисциплины", true, new string[] {
+            ""})]
     [View("TeacherL", new string[] {
             "Surname as \'Фамилия\'",
             "Name as \'Имя\'",
@@ -58,6 +61,8 @@ namespace HSE.Timetable
         private System.Nullable<System.DateTime> fEditTime;
         
         private string fEditor;
+        
+        private HSE.Timetable.DetailArrayOfDiscipline fDiscipline;
         
         // *** Start programmer edit section *** (Teacher CustomMembers)
 
@@ -283,6 +288,41 @@ namespace HSE.Timetable
                 // *** Start programmer edit section *** (Teacher.Editor Set end)
 
                 // *** End programmer edit section *** (Teacher.Editor Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Teacher.
+        /// </summary>
+        // *** Start programmer edit section *** (Teacher.Discipline CustomAttributes)
+
+        // *** End programmer edit section *** (Teacher.Discipline CustomAttributes)
+        public virtual HSE.Timetable.DetailArrayOfDiscipline Discipline
+        {
+            get
+            {
+                // *** Start programmer edit section *** (Teacher.Discipline Get start)
+
+                // *** End programmer edit section *** (Teacher.Discipline Get start)
+                if ((this.fDiscipline == null))
+                {
+                    this.fDiscipline = new HSE.Timetable.DetailArrayOfDiscipline(this);
+                }
+                HSE.Timetable.DetailArrayOfDiscipline result = this.fDiscipline;
+                // *** Start programmer edit section *** (Teacher.Discipline Get end)
+
+                // *** End programmer edit section *** (Teacher.Discipline Get end)
+                return result;
+            }
+            set
+            {
+                // *** Start programmer edit section *** (Teacher.Discipline Set start)
+
+                // *** End programmer edit section *** (Teacher.Discipline Set start)
+                this.fDiscipline = value;
+                // *** Start programmer edit section *** (Teacher.Discipline Set end)
+
+                // *** End programmer edit section *** (Teacher.Discipline Set end)
             }
         }
         

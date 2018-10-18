@@ -25,25 +25,20 @@ namespace HSE.Timetable
     /// <summary>
     /// Group.
     /// </summary>
-    // *** Start programmer edit section *** (Group CustomAttributes)
+    // *** Start programmer edit section *** (StudentGroup CustomAttributes)
 
-    // *** End programmer edit section *** (Group CustomAttributes)
+    // *** End programmer edit section *** (StudentGroup CustomAttributes)
+    [PublishName("StudentGroup")]
     [AutoAltered()]
+    [Caption("Group")]
     [AccessType(ICSSoft.STORMNET.AccessType.@this)]
     [View("AuditView", new string[] {
-            "Name as \'Name\'",
-            "Teacher as \'Teacher\'",
-            "Teacher.Surname as \'Surname\'"})]
-    [View("GroupE", new string[] {
-            "Name as \'Название\'",
-            "Teacher as \'Преподаватель\'",
-            "Teacher.Surname as \'Surname\'"}, Hidden=new string[] {
-            "Teacher.Surname"})]
-    [MasterViewDefineAttribute("GroupE", "Teacher", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Surname")]
-    [View("GroupL", new string[] {
-            "Name as \'Название\'",
-            "Teacher.Surname as \'Преподаватель\'"})]
-    public class Group : ICSSoft.STORMNET.DataObject, IDataObjectWithAuditFields
+            "Name as \'Name\'"})]
+    [View("StudentGroupE", new string[] {
+            "Name as \'Название\'"})]
+    [View("StudentGroupL", new string[] {
+            "Name as \'Название\'"})]
+    public class StudentGroup : ICSSoft.STORMNET.DataObject, IDataObjectWithAuditFields
     {
         
         private string fName;
@@ -56,202 +51,166 @@ namespace HSE.Timetable
         
         private string fEditor;
         
-        private HSE.Timetable.Teacher fTeacher;
-        
-        // *** Start programmer edit section *** (Group CustomMembers)
+        // *** Start programmer edit section *** (StudentGroup CustomMembers)
 
-        // *** End programmer edit section *** (Group CustomMembers)
+        // *** End programmer edit section *** (StudentGroup CustomMembers)
 
         
         /// <summary>
         /// Name.
         /// </summary>
-        // *** Start programmer edit section *** (Group.Name CustomAttributes)
+        // *** Start programmer edit section *** (StudentGroup.Name CustomAttributes)
 
-        // *** End programmer edit section *** (Group.Name CustomAttributes)
+        // *** End programmer edit section *** (StudentGroup.Name CustomAttributes)
         [StrLen(255)]
         public virtual string Name
         {
             get
             {
-                // *** Start programmer edit section *** (Group.Name Get start)
+                // *** Start programmer edit section *** (StudentGroup.Name Get start)
 
-                // *** End programmer edit section *** (Group.Name Get start)
+                // *** End programmer edit section *** (StudentGroup.Name Get start)
                 string result = this.fName;
-                // *** Start programmer edit section *** (Group.Name Get end)
+                // *** Start programmer edit section *** (StudentGroup.Name Get end)
 
-                // *** End programmer edit section *** (Group.Name Get end)
+                // *** End programmer edit section *** (StudentGroup.Name Get end)
                 return result;
             }
             set
             {
-                // *** Start programmer edit section *** (Group.Name Set start)
+                // *** Start programmer edit section *** (StudentGroup.Name Set start)
 
-                // *** End programmer edit section *** (Group.Name Set start)
+                // *** End programmer edit section *** (StudentGroup.Name Set start)
                 this.fName = value;
-                // *** Start programmer edit section *** (Group.Name Set end)
+                // *** Start programmer edit section *** (StudentGroup.Name Set end)
 
-                // *** End programmer edit section *** (Group.Name Set end)
+                // *** End programmer edit section *** (StudentGroup.Name Set end)
             }
         }
         
         /// <summary>
         /// Время создания объекта.
         /// </summary>
-        // *** Start programmer edit section *** (Group.CreateTime CustomAttributes)
+        // *** Start programmer edit section *** (StudentGroup.CreateTime CustomAttributes)
 
-        // *** End programmer edit section *** (Group.CreateTime CustomAttributes)
+        // *** End programmer edit section *** (StudentGroup.CreateTime CustomAttributes)
         public virtual System.Nullable<System.DateTime> CreateTime
         {
             get
             {
-                // *** Start programmer edit section *** (Group.CreateTime Get start)
+                // *** Start programmer edit section *** (StudentGroup.CreateTime Get start)
 
-                // *** End programmer edit section *** (Group.CreateTime Get start)
+                // *** End programmer edit section *** (StudentGroup.CreateTime Get start)
                 System.Nullable<System.DateTime> result = this.fCreateTime;
-                // *** Start programmer edit section *** (Group.CreateTime Get end)
+                // *** Start programmer edit section *** (StudentGroup.CreateTime Get end)
 
-                // *** End programmer edit section *** (Group.CreateTime Get end)
+                // *** End programmer edit section *** (StudentGroup.CreateTime Get end)
                 return result;
             }
             set
             {
-                // *** Start programmer edit section *** (Group.CreateTime Set start)
+                // *** Start programmer edit section *** (StudentGroup.CreateTime Set start)
 
-                // *** End programmer edit section *** (Group.CreateTime Set start)
+                // *** End programmer edit section *** (StudentGroup.CreateTime Set start)
                 this.fCreateTime = value;
-                // *** Start programmer edit section *** (Group.CreateTime Set end)
+                // *** Start programmer edit section *** (StudentGroup.CreateTime Set end)
 
-                // *** End programmer edit section *** (Group.CreateTime Set end)
+                // *** End programmer edit section *** (StudentGroup.CreateTime Set end)
             }
         }
         
         /// <summary>
         /// Создатель объекта.
         /// </summary>
-        // *** Start programmer edit section *** (Group.Creator CustomAttributes)
+        // *** Start programmer edit section *** (StudentGroup.Creator CustomAttributes)
 
-        // *** End programmer edit section *** (Group.Creator CustomAttributes)
+        // *** End programmer edit section *** (StudentGroup.Creator CustomAttributes)
         [StrLen(255)]
         public virtual string Creator
         {
             get
             {
-                // *** Start programmer edit section *** (Group.Creator Get start)
+                // *** Start programmer edit section *** (StudentGroup.Creator Get start)
 
-                // *** End programmer edit section *** (Group.Creator Get start)
+                // *** End programmer edit section *** (StudentGroup.Creator Get start)
                 string result = this.fCreator;
-                // *** Start programmer edit section *** (Group.Creator Get end)
+                // *** Start programmer edit section *** (StudentGroup.Creator Get end)
 
-                // *** End programmer edit section *** (Group.Creator Get end)
+                // *** End programmer edit section *** (StudentGroup.Creator Get end)
                 return result;
             }
             set
             {
-                // *** Start programmer edit section *** (Group.Creator Set start)
+                // *** Start programmer edit section *** (StudentGroup.Creator Set start)
 
-                // *** End programmer edit section *** (Group.Creator Set start)
+                // *** End programmer edit section *** (StudentGroup.Creator Set start)
                 this.fCreator = value;
-                // *** Start programmer edit section *** (Group.Creator Set end)
+                // *** Start programmer edit section *** (StudentGroup.Creator Set end)
 
-                // *** End programmer edit section *** (Group.Creator Set end)
+                // *** End programmer edit section *** (StudentGroup.Creator Set end)
             }
         }
         
         /// <summary>
         /// Время последнего редактирования объекта.
         /// </summary>
-        // *** Start programmer edit section *** (Group.EditTime CustomAttributes)
+        // *** Start programmer edit section *** (StudentGroup.EditTime CustomAttributes)
 
-        // *** End programmer edit section *** (Group.EditTime CustomAttributes)
+        // *** End programmer edit section *** (StudentGroup.EditTime CustomAttributes)
         public virtual System.Nullable<System.DateTime> EditTime
         {
             get
             {
-                // *** Start programmer edit section *** (Group.EditTime Get start)
+                // *** Start programmer edit section *** (StudentGroup.EditTime Get start)
 
-                // *** End programmer edit section *** (Group.EditTime Get start)
+                // *** End programmer edit section *** (StudentGroup.EditTime Get start)
                 System.Nullable<System.DateTime> result = this.fEditTime;
-                // *** Start programmer edit section *** (Group.EditTime Get end)
+                // *** Start programmer edit section *** (StudentGroup.EditTime Get end)
 
-                // *** End programmer edit section *** (Group.EditTime Get end)
+                // *** End programmer edit section *** (StudentGroup.EditTime Get end)
                 return result;
             }
             set
             {
-                // *** Start programmer edit section *** (Group.EditTime Set start)
+                // *** Start programmer edit section *** (StudentGroup.EditTime Set start)
 
-                // *** End programmer edit section *** (Group.EditTime Set start)
+                // *** End programmer edit section *** (StudentGroup.EditTime Set start)
                 this.fEditTime = value;
-                // *** Start programmer edit section *** (Group.EditTime Set end)
+                // *** Start programmer edit section *** (StudentGroup.EditTime Set end)
 
-                // *** End programmer edit section *** (Group.EditTime Set end)
+                // *** End programmer edit section *** (StudentGroup.EditTime Set end)
             }
         }
         
         /// <summary>
         /// Последний редактор объекта.
         /// </summary>
-        // *** Start programmer edit section *** (Group.Editor CustomAttributes)
+        // *** Start programmer edit section *** (StudentGroup.Editor CustomAttributes)
 
-        // *** End programmer edit section *** (Group.Editor CustomAttributes)
+        // *** End programmer edit section *** (StudentGroup.Editor CustomAttributes)
         [StrLen(255)]
         public virtual string Editor
         {
             get
             {
-                // *** Start programmer edit section *** (Group.Editor Get start)
+                // *** Start programmer edit section *** (StudentGroup.Editor Get start)
 
-                // *** End programmer edit section *** (Group.Editor Get start)
+                // *** End programmer edit section *** (StudentGroup.Editor Get start)
                 string result = this.fEditor;
-                // *** Start programmer edit section *** (Group.Editor Get end)
+                // *** Start programmer edit section *** (StudentGroup.Editor Get end)
 
-                // *** End programmer edit section *** (Group.Editor Get end)
+                // *** End programmer edit section *** (StudentGroup.Editor Get end)
                 return result;
             }
             set
             {
-                // *** Start programmer edit section *** (Group.Editor Set start)
+                // *** Start programmer edit section *** (StudentGroup.Editor Set start)
 
-                // *** End programmer edit section *** (Group.Editor Set start)
+                // *** End programmer edit section *** (StudentGroup.Editor Set start)
                 this.fEditor = value;
-                // *** Start programmer edit section *** (Group.Editor Set end)
+                // *** Start programmer edit section *** (StudentGroup.Editor Set end)
 
-                // *** End programmer edit section *** (Group.Editor Set end)
-            }
-        }
-        
-        /// <summary>
-        /// Group.
-        /// </summary>
-        // *** Start programmer edit section *** (Group.Teacher CustomAttributes)
-
-        // *** End programmer edit section *** (Group.Teacher CustomAttributes)
-        [PropertyStorage(new string[] {
-                "Teacher"})]
-        [NotNull()]
-        public virtual HSE.Timetable.Teacher Teacher
-        {
-            get
-            {
-                // *** Start programmer edit section *** (Group.Teacher Get start)
-
-                // *** End programmer edit section *** (Group.Teacher Get start)
-                HSE.Timetable.Teacher result = this.fTeacher;
-                // *** Start programmer edit section *** (Group.Teacher Get end)
-
-                // *** End programmer edit section *** (Group.Teacher Get end)
-                return result;
-            }
-            set
-            {
-                // *** Start programmer edit section *** (Group.Teacher Set start)
-
-                // *** End programmer edit section *** (Group.Teacher Set start)
-                this.fTeacher = value;
-                // *** Start programmer edit section *** (Group.Teacher Set end)
-
-                // *** End programmer edit section *** (Group.Teacher Set end)
+                // *** End programmer edit section *** (StudentGroup.Editor Set end)
             }
         }
         
@@ -268,29 +227,29 @@ namespace HSE.Timetable
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("AuditView", typeof(HSE.Timetable.Group));
+                    return ICSSoft.STORMNET.Information.GetView("AuditView", typeof(HSE.Timetable.StudentGroup));
                 }
             }
             
             /// <summary>
-            /// "GroupE" view.
+            /// "StudentGroupE" view.
             /// </summary>
-            public static ICSSoft.STORMNET.View GroupE
+            public static ICSSoft.STORMNET.View StudentGroupE
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("GroupE", typeof(HSE.Timetable.Group));
+                    return ICSSoft.STORMNET.Information.GetView("StudentGroupE", typeof(HSE.Timetable.StudentGroup));
                 }
             }
             
             /// <summary>
-            /// "GroupL" view.
+            /// "StudentGroupL" view.
             /// </summary>
-            public static ICSSoft.STORMNET.View GroupL
+            public static ICSSoft.STORMNET.View StudentGroupL
             {
                 get
                 {
-                    return ICSSoft.STORMNET.Information.GetView("GroupL", typeof(HSE.Timetable.Group));
+                    return ICSSoft.STORMNET.Information.GetView("StudentGroupL", typeof(HSE.Timetable.StudentGroup));
                 }
             }
         }

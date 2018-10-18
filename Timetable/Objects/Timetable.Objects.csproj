@@ -134,14 +134,17 @@
     <Compile Include="Discipline.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Group.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Room.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <Compile Include="DisciplineKind.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StudentGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

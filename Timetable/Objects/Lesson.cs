@@ -28,14 +28,13 @@ namespace HSE.Timetable
     // *** Start programmer edit section *** (Lesson CustomAttributes)
 
     // *** End programmer edit section *** (Lesson CustomAttributes)
+    [PublishName("Lesson")]
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.@this)]
     [View("AuditView", new string[] {
             "Beginning as \'Beginning\'",
             "Ending as \'Ending\'",
             "Date as \'Date\'",
-            "Group as \'Group\'",
-            "Group.Name as \'Name\'",
             "Discipline as \'Discipline\'",
             "Discipline.Name as \'Name\'",
             "Room as \'Room\'",
@@ -44,23 +43,23 @@ namespace HSE.Timetable
             "Beginning as \'Начало\'",
             "Ending as \'Окончание\'",
             "Date as \'Дата проведения\'",
-            "Group as \'Группа\'",
-            "Group.Name as \'Name\'",
+            "StudentGroup as \'Группа\'",
+            "StudentGroup.Name",
             "Discipline as \'Дисциплина\'",
             "Discipline.Name as \'Name\'",
             "Room as \'Аудитория\'",
             "Room.Number as \'Number\'"}, Hidden=new string[] {
-            "Group.Name",
+            "StudentGroup.Name",
             "Discipline.Name",
             "Room.Number"})]
-    [MasterViewDefineAttribute("LessonE", "Group", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Name")]
+    [MasterViewDefineAttribute("LessonE", "StudentGroup", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Name")]
     [MasterViewDefineAttribute("LessonE", "Discipline", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Name")]
     [MasterViewDefineAttribute("LessonE", "Room", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Number")]
     [View("LessonL", new string[] {
             "Beginning as \'Начало\'",
             "Ending as \'Окончание\'",
             "Date as \'Дата проведения\'",
-            "Group.Name as \'Группа\'",
+            "StudentGroup.Name as \'Группа\'",
             "Discipline.Name as \'Дисциплина\'",
             "Room.Number as \'Аудитория\'"})]
     public class Lesson : ICSSoft.STORMNET.DataObject, IDataObjectWithAuditFields
@@ -80,7 +79,7 @@ namespace HSE.Timetable
         
         private string fEditor;
         
-        private HSE.Timetable.Group fGroup;
+        private HSE.Timetable.StudentGroup fStudentGroup;
         
         private HSE.Timetable.Discipline fDiscipline;
         
@@ -313,34 +312,34 @@ namespace HSE.Timetable
         /// <summary>
         /// Lesson.
         /// </summary>
-        // *** Start programmer edit section *** (Lesson.Group CustomAttributes)
+        // *** Start programmer edit section *** (Lesson.StudentGroup CustomAttributes)
 
-        // *** End programmer edit section *** (Lesson.Group CustomAttributes)
+        // *** End programmer edit section *** (Lesson.StudentGroup CustomAttributes)
         [PropertyStorage(new string[] {
-                "Group"})]
+                "StudentGroup"})]
         [NotNull()]
-        public virtual HSE.Timetable.Group Group
+        public virtual HSE.Timetable.StudentGroup StudentGroup
         {
             get
             {
-                // *** Start programmer edit section *** (Lesson.Group Get start)
+                // *** Start programmer edit section *** (Lesson.StudentGroup Get start)
 
-                // *** End programmer edit section *** (Lesson.Group Get start)
-                HSE.Timetable.Group result = this.fGroup;
-                // *** Start programmer edit section *** (Lesson.Group Get end)
+                // *** End programmer edit section *** (Lesson.StudentGroup Get start)
+                HSE.Timetable.StudentGroup result = this.fStudentGroup;
+                // *** Start programmer edit section *** (Lesson.StudentGroup Get end)
 
-                // *** End programmer edit section *** (Lesson.Group Get end)
+                // *** End programmer edit section *** (Lesson.StudentGroup Get end)
                 return result;
             }
             set
             {
-                // *** Start programmer edit section *** (Lesson.Group Set start)
+                // *** Start programmer edit section *** (Lesson.StudentGroup Set start)
 
-                // *** End programmer edit section *** (Lesson.Group Set start)
-                this.fGroup = value;
-                // *** Start programmer edit section *** (Lesson.Group Set end)
+                // *** End programmer edit section *** (Lesson.StudentGroup Set start)
+                this.fStudentGroup = value;
+                // *** Start programmer edit section *** (Lesson.StudentGroup Set end)
 
-                // *** End programmer edit section *** (Lesson.Group Set end)
+                // *** End programmer edit section *** (Lesson.StudentGroup Set end)
             }
         }
         

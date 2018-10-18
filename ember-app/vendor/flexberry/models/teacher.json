@@ -1,0 +1,165 @@
+﻿{
+  "name": "Teacher",
+  "modelName": "teacher",
+  "className": "Teacher",
+  "nameSpace": "",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "surname",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "middleName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "createTime",
+      "type": "date",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "creator",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "editTime",
+      "type": "date",
+      "flexberryType": "AuditNullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "editor",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "discipline",
+      "relatedTo": "discipline",
+      "inverse": "teacher"
+    }
+  ],
+  "projections": [
+    {
+      "name": "AuditView",
+      "modelName": "teacher",
+      "attrs": [
+        {
+          "name": "surname",
+          "caption": "Surname",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "middleName",
+          "caption": "Middle name",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "TeacherE",
+      "modelName": "teacher",
+      "attrs": [
+        {
+          "name": "surname",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "name",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "middleName",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "DisciplineD",
+          "caption": "Дисциплины",
+          "name": "discipline",
+          "relatedTo": "discipline",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "TeacherL",
+      "modelName": "teacher",
+      "attrs": [
+        {
+          "name": "surname",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "name",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "middleName",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

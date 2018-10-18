@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "StudentGroup",
+      "projection": "StudentGroupL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Discipline",
+      "projection": "DisciplineL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Room",
+      "projection": "RoomL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Занятие",
+  "name": "LessonE",
+  "className": "LessonE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "lesson",
+      "modelProjection": "LessonE"
+    }
+  ]
+}

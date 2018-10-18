@@ -28,21 +28,28 @@ namespace HSE.Timetable
     // *** Start programmer edit section *** (Discipline CustomAttributes)
 
     // *** End programmer edit section *** (Discipline CustomAttributes)
+    [PublishName("Discipline")]
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.@this)]
     [View("AuditView", new string[] {
             "Name as \'Name\'",
             "Teacher as \'Teacher\'",
-            "Teacher.Surname as \'Surname\'"})]
+            "Teacher.Surname as \'Surname\'",
+            "DisciplineKind"})]
     [View("DisciplineE", new string[] {
             "Name as \'Название\'",
             "Teacher as \'Преподаватель\'",
-            "Teacher.Surname as \'Surname\'"}, Hidden=new string[] {
-            "Teacher.Surname"})]
+            "Teacher.Surname",
+            "DisciplineKind as \'Вид\'",
+            "DisciplineKind.Name"}, Hidden=new string[] {
+            "Teacher.Surname",
+            "DisciplineKind.Name"})]
     [MasterViewDefineAttribute("DisciplineE", "Teacher", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Surname")]
+    [MasterViewDefineAttribute("DisciplineE", "DisciplineKind", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Name")]
     [View("DisciplineL", new string[] {
             "Name as \'Название\'",
-            "Teacher.Surname as \'Преподаватель\'"})]
+            "Teacher.Surname as \'Преподаватель\'",
+            "DisciplineKind.Name as \'Вид занятия\'"})]
     public class Discipline : ICSSoft.STORMNET.DataObject, IDataObjectWithAuditFields
     {
         
@@ -55,6 +62,8 @@ namespace HSE.Timetable
         private System.Nullable<System.DateTime> fEditTime;
         
         private string fEditor;
+        
+        private HSE.Timetable.DisciplineKind fDisciplineKind;
         
         private HSE.Timetable.Teacher fTeacher;
         
@@ -224,12 +233,47 @@ namespace HSE.Timetable
         /// <summary>
         /// Discipline.
         /// </summary>
+        // *** Start programmer edit section *** (Discipline.DisciplineKind CustomAttributes)
+
+        // *** End programmer edit section *** (Discipline.DisciplineKind CustomAttributes)
+        [PropertyStorage(new string[] {
+                "DisciplineKind"})]
+        [NotNull()]
+        public virtual HSE.Timetable.DisciplineKind DisciplineKind
+        {
+            get
+            {
+                // *** Start programmer edit section *** (Discipline.DisciplineKind Get start)
+
+                // *** End programmer edit section *** (Discipline.DisciplineKind Get start)
+                HSE.Timetable.DisciplineKind result = this.fDisciplineKind;
+                // *** Start programmer edit section *** (Discipline.DisciplineKind Get end)
+
+                // *** End programmer edit section *** (Discipline.DisciplineKind Get end)
+                return result;
+            }
+            set
+            {
+                // *** Start programmer edit section *** (Discipline.DisciplineKind Set start)
+
+                // *** End programmer edit section *** (Discipline.DisciplineKind Set start)
+                this.fDisciplineKind = value;
+                // *** Start programmer edit section *** (Discipline.DisciplineKind Set end)
+
+                // *** End programmer edit section *** (Discipline.DisciplineKind Set end)
+            }
+        }
+        
+        /// <summary>
+        /// мастеровая ссылка на шапку HSE.Timetable.Teacher.
+        /// </summary>
         // *** Start programmer edit section *** (Discipline.Teacher CustomAttributes)
 
         // *** End programmer edit section *** (Discipline.Teacher CustomAttributes)
+        [Agregator()]
+        [NotNull()]
         [PropertyStorage(new string[] {
                 "Teacher"})]
-        [NotNull()]
         public virtual HSE.Timetable.Teacher Teacher
         {
             get
@@ -385,6 +429,48 @@ namespace HSE.Timetable
             /// Сохранять ли все значения атрибутов, а не только изменяемые.
             /// </summary>
             public static bool KeepAllValues = false;
+        }
+    }
+    
+    /// <summary>
+    /// Detail array of Discipline.
+    /// </summary>
+    // *** Start programmer edit section *** (DetailArrayDetailArrayOfDiscipline CustomAttributes)
+
+    // *** End programmer edit section *** (DetailArrayDetailArrayOfDiscipline CustomAttributes)
+    public class DetailArrayOfDiscipline : ICSSoft.STORMNET.DetailArray
+    {
+        
+        // *** Start programmer edit section *** (HSE.Timetable.DetailArrayOfDiscipline members)
+
+        // *** End programmer edit section *** (HSE.Timetable.DetailArrayOfDiscipline members)
+
+        
+        /// <summary>
+        /// Construct detail array.
+        /// </summary>
+        /// <summary>
+        /// Returns object with type Discipline by index.
+        /// </summary>
+        /// <summary>
+        /// Adds object with type Discipline.
+        /// </summary>
+        public DetailArrayOfDiscipline(HSE.Timetable.Teacher fTeacher) : 
+                base(typeof(Discipline), ((ICSSoft.STORMNET.DataObject)(fTeacher)))
+        {
+        }
+        
+        public HSE.Timetable.Discipline this[int index]
+        {
+            get
+            {
+                return ((HSE.Timetable.Discipline)(this.ItemByIndex(index)));
+            }
+        }
+        
+        public virtual void Add(HSE.Timetable.Discipline dataobject)
+        {
+            this.AddObject(((ICSSoft.STORMNET.DataObject)(dataobject)));
         }
     }
 }

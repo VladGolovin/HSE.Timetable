@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Группа",
+  "name": "GroupE",
+  "className": "GroupE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "group",
+      "modelProjection": "GroupE"
+    }
+  ]
+}

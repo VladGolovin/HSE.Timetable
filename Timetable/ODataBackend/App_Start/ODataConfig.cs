@@ -40,8 +40,8 @@
                 throw new ArgumentNullException("container");
             }
 
-            // To support CORS uncomment the line below.
-            // config.EnableCors(new DynamicCorsPolicyProvider());
+            // Support CORS
+            config.EnableCors(new DynamicCorsPolicyProvider());
             // Use constructor with true first parameter for enable SupportsCredentials.
 
             // Use Unity as WebAPI dependency resolver

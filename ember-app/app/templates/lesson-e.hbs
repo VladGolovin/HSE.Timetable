@@ -1,0 +1,116 @@
+<h3 class="ui header">{{t 'forms.lesson-e.caption'}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=model.errors}}
+    </div>
+  </div>
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button type="submit" class="ui button save-button" {{action 'save'}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button type="submit" class="ui button save-del-button" {{action 'delete'}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button type="submit" class="ui button close-button" {{action 'close'}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.beginning
+    class=(if model.errors.beginning 'error' '')
+    label=(t 'forms.lesson-e.beginning-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.beginning pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.ending
+    class=(if model.errors.ending 'error' '')
+    label=(t 'forms.lesson-e.ending-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.ending pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.lesson-e.date-caption'}}</label>
+  {{
+    flexberry-datepicker
+    placeholder=(t 'components.flexberry-datepicker.placeholder')
+    readonly=readonly
+    value=model.date
+    class=(if model.errors.date 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.date pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.lesson-e.studentGroup-caption'}}</label>
+  {{
+    flexberry-lookup
+    choose='showLookupDialog'
+    remove='removeLookupValue'
+    value=model.studentGroup
+    displayAttributeName='name'
+    autocomplete=true
+    relationName='studentGroup'
+    projection='StudentGroupL'
+    title=(t 'forms.lesson-e.studentGroup-caption')
+    readonly=readonly
+  }}
+  {{flexberry-validationmessage error=model.errors.studentGroup pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.lesson-e.discipline-caption'}}</label>
+  {{
+    flexberry-lookup
+    choose='showLookupDialog'
+    remove='removeLookupValue'
+    value=model.discipline
+    displayAttributeName='name'
+    autocomplete=true
+    relationName='discipline'
+    projection='DisciplineL'
+    title=(t 'forms.lesson-e.discipline-caption')
+    readonly=readonly
+  }}
+  {{flexberry-validationmessage error=model.errors.discipline pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.lesson-e.room-caption'}}</label>
+  {{
+    flexberry-lookup
+    choose='showLookupDialog'
+    remove='removeLookupValue'
+    value=model.room
+    displayAttributeName='number'
+    autocomplete=true
+    relationName='room'
+    projection='RoomL'
+    title=(t 'forms.lesson-e.room-caption')
+    readonly=readonly
+  }}
+  {{flexberry-validationmessage error=model.errors.room pointing="pointing"}}
+</div>
+
+</form>

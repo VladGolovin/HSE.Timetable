@@ -1,0 +1,15 @@
+﻿{
+  "newForm": null,
+  "editForm": null,
+  "external": false,
+  "caption": "Группы",
+  "name": "StudentGroupL",
+  "className": "StudentGroupL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "student-group",
+      "modelProjection": "StudentGroupL"
+    }
+  ]
+}

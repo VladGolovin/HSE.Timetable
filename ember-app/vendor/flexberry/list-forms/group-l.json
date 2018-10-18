@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "group-e",
+  "editForm": "group-e",
+  "external": false,
+  "caption": "Группы",
+  "name": "GroupL",
+  "className": "GroupL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "group",
+      "modelProjection": "GroupL"
+    }
+  ]
+}
