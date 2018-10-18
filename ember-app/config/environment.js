@@ -9,6 +9,9 @@ module.exports = function(environment) {
     backendUrl = 'http://localhost:6500';
   }
 
+  if (environment === 'azure') {
+    backendUrl = 'https://hse-timetable-api.azurewebsites.net'
+  }
 
   var ENV = {
     modulePrefix: 'ember-app',
@@ -153,10 +156,6 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
-  }
-
-  if (environment === 'production') {
-
   }
 
   return ENV;

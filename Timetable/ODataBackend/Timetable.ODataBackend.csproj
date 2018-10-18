@@ -240,6 +240,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="hse-timetable-api - Web Deploy.pubxml" />
     <None Include="packages.config" />
     <Content Include="Global.asax" />
     <Compile Include="Global.asax.cs">
