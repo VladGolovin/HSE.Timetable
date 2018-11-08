@@ -13,6 +13,7 @@ namespace HSE.Timetable
     using System;
     using System.Xml;
     using ICSSoft.STORMNET;
+    using ICSSoft.STORMNET.Business;
     using ICSSoft.STORMNET.Business.Audit;
     using ICSSoft.STORMNET.Business.Audit.Objects;
     
@@ -62,6 +63,7 @@ namespace HSE.Timetable
             "StudentGroup.Name as \'Группа\'",
             "Discipline.Name as \'Дисциплина\'",
             "Room.Number as \'Аудитория\'"})]
+    [BusinessServer("HSE.Timetable.LessonBS, Timetable.BusinessServers", ICSSoft.STORMNET.Business.DataServiceObjectEvents.OnAllEvents)]
     public class Lesson : ICSSoft.STORMNET.DataObject, IDataObjectWithAuditFields
     {
         

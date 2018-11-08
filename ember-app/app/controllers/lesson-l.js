@@ -8,5 +8,18 @@ export default ListFormController.extend({
     @type String
     @default 'lesson-e'
    */
-  editFormRoute: 'lesson-e'
+  editFormRoute: 'lesson-e',
+
+  getCellComponent(attr, bindingPath) {
+    let cellComponent = this._super(...arguments);
+
+    if (bindingPath === 'beginning' || bindingPath === 'ending') {
+      cellComponent.componentName = 'hse-timepickr';
+      cellComponent.componentProperties = {
+        readonly: true
+      }
+    }     
+
+    return cellComponent;
+  }
 });

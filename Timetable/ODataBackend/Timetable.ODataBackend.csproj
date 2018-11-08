@@ -50,6 +50,10 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Timetable.BusinessServers\Timetable.BusinessServers.csproj">
+      <Project>{d2628e93-4f0e-4ba2-a460-64ef7ac91245}</Project>
+      <Name>Timetable.BusinessServers</Name>
+    </ProjectReference>
     <Reference Include="System">
       <HintPath>System</HintPath>
     </Reference>

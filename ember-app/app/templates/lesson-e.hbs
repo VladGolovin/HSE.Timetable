@@ -26,7 +26,7 @@
   </div>
   <div class="field">
   {{
-    flexberry-field
+    hse-timepickr
     placeholder=(t 'components.flexberry-field.placeholder')
     readonly=readonly
     required=true
@@ -39,13 +39,13 @@
 
 <div class="field">
   {{
-    flexberry-field
+    hse-timepickr
     placeholder=(t 'components.flexberry-field.placeholder')
     readonly=readonly
     required=true
     value=model.ending
-    class=(if model.errors.ending 'error' '')
-    label=(t 'forms.lesson-e.ending-caption')
+    class=(if model.errors.beginning 'error' '')
+    label=(t 'forms.lesson-e.beginning-caption')
   }}
   {{flexberry-validationmessage error=model.errors.ending pointing="pointing"}}
 </div>
