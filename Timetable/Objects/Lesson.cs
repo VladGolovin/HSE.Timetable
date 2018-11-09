@@ -12,8 +12,8 @@ namespace HSE.Timetable
 {
     using System;
     using System.Xml;
-    using ICSSoft.STORMNET;
     using ICSSoft.STORMNET.Business;
+    using ICSSoft.STORMNET;
     using ICSSoft.STORMNET.Business.Audit;
     using ICSSoft.STORMNET.Business.Audit.Objects;
     
@@ -29,6 +29,7 @@ namespace HSE.Timetable
     // *** Start programmer edit section *** (Lesson CustomAttributes)
 
     // *** End programmer edit section *** (Lesson CustomAttributes)
+    [BusinessServer("HSE.Timetable.LessonBS, Timetable.BusinessServers", ICSSoft.STORMNET.Business.DataServiceObjectEvents.OnAllEvents)]
     [PublishName("Lesson")]
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.@this)]
@@ -39,7 +40,9 @@ namespace HSE.Timetable
             "Discipline as \'Discipline\'",
             "Discipline.Name as \'Name\'",
             "Room as \'Room\'",
-            "Room.Number as \'Number\'"})]
+            "Room.Number as \'Number\'",
+            "StudentGroup",
+            "StudentGroup.Name"})]
     [View("LessonE", new string[] {
             "Beginning as \'Начало\'",
             "Ending as \'Окончание\'",
@@ -63,7 +66,6 @@ namespace HSE.Timetable
             "StudentGroup.Name as \'Группа\'",
             "Discipline.Name as \'Дисциплина\'",
             "Room.Number as \'Аудитория\'"})]
-    [BusinessServer("HSE.Timetable.LessonBS, Timetable.BusinessServers", ICSSoft.STORMNET.Business.DataServiceObjectEvents.OnAllEvents)]
     public class Lesson : ICSSoft.STORMNET.DataObject, IDataObjectWithAuditFields
     {
         
@@ -81,11 +83,11 @@ namespace HSE.Timetable
         
         private string fEditor;
         
+        private HSE.Timetable.Room fRoom;
+        
         private HSE.Timetable.StudentGroup fStudentGroup;
         
         private HSE.Timetable.Discipline fDiscipline;
-        
-        private HSE.Timetable.Room fRoom;
         
         // *** Start programmer edit section *** (Lesson CustomMembers)
 
@@ -314,6 +316,40 @@ namespace HSE.Timetable
         /// <summary>
         /// Lesson.
         /// </summary>
+        // *** Start programmer edit section *** (Lesson.Room CustomAttributes)
+
+        // *** End programmer edit section *** (Lesson.Room CustomAttributes)
+        [PropertyStorage(new string[] {
+                "Room"})]
+        [NotNull()]
+        public virtual HSE.Timetable.Room Room
+        {
+            get
+            {
+                // *** Start programmer edit section *** (Lesson.Room Get start)
+
+                // *** End programmer edit section *** (Lesson.Room Get start)
+                HSE.Timetable.Room result = this.fRoom;
+                // *** Start programmer edit section *** (Lesson.Room Get end)
+
+                // *** End programmer edit section *** (Lesson.Room Get end)
+                return result;
+            }
+            set
+            {
+                // *** Start programmer edit section *** (Lesson.Room Set start)
+
+                // *** End programmer edit section *** (Lesson.Room Set start)
+                this.fRoom = value;
+                // *** Start programmer edit section *** (Lesson.Room Set end)
+
+                // *** End programmer edit section *** (Lesson.Room Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Lesson.
+        /// </summary>
         // *** Start programmer edit section *** (Lesson.StudentGroup CustomAttributes)
 
         // *** End programmer edit section *** (Lesson.StudentGroup CustomAttributes)
@@ -376,40 +412,6 @@ namespace HSE.Timetable
                 // *** Start programmer edit section *** (Lesson.Discipline Set end)
 
                 // *** End programmer edit section *** (Lesson.Discipline Set end)
-            }
-        }
-        
-        /// <summary>
-        /// Lesson.
-        /// </summary>
-        // *** Start programmer edit section *** (Lesson.Room CustomAttributes)
-
-        // *** End programmer edit section *** (Lesson.Room CustomAttributes)
-        [PropertyStorage(new string[] {
-                "Room"})]
-        [NotNull()]
-        public virtual HSE.Timetable.Room Room
-        {
-            get
-            {
-                // *** Start programmer edit section *** (Lesson.Room Get start)
-
-                // *** End programmer edit section *** (Lesson.Room Get start)
-                HSE.Timetable.Room result = this.fRoom;
-                // *** Start programmer edit section *** (Lesson.Room Get end)
-
-                // *** End programmer edit section *** (Lesson.Room Get end)
-                return result;
-            }
-            set
-            {
-                // *** Start programmer edit section *** (Lesson.Room Set start)
-
-                // *** End programmer edit section *** (Lesson.Room Set start)
-                this.fRoom = value;
-                // *** Start programmer edit section *** (Lesson.Room Set end)
-
-                // *** End programmer edit section *** (Lesson.Room Set end)
             }
         }
         

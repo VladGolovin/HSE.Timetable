@@ -50,10 +50,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Timetable.BusinessServers\Timetable.BusinessServers.csproj">
-      <Project>{d2628e93-4f0e-4ba2-a460-64ef7ac91245}</Project>
-      <Name>Timetable.BusinessServers</Name>
-    </ProjectReference>
     <Reference Include="System">
       <HintPath>System</HintPath>
     </Reference>
@@ -87,6 +83,10 @@
     <Reference Include="System.EnterpriseServices">
       <HintPath>System.EnterpriseServices</HintPath>
     </Reference>
+    <ProjectReference Include="..\BusinessServers\Timetable.BusinessServers.csproj">
+      <Project>{87863892-ff7d-465a-ab2e-2a60b3a20b8b}</Project>
+      <Name>Timetable.BusinessServers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Objects\Timetable.Objects.csproj">
       <Project>{2795b89a-2eac-4819-aca5-c29baca49134}</Project>
       <Name>Timetable.Objects</Name>
